@@ -8,7 +8,9 @@ const Form = ({todo, setTodo, todoLists, setTodoList}) => {
 
     const onSubmitHandle = (e) => {
         e.preventDefault();
-        setTodoList([...todoLists, todo]);
+        if (todo.length > 0)
+            setTodoList([...todoLists, todo]);
+
         setTodo('');
     }
 
