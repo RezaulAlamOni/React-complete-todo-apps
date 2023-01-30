@@ -48,7 +48,7 @@ form > input {
     background: #9ad1ff;
     border: 1px solid #acacac;
     display: inline-block;
-    margin: 5px 10px;
+    margin: 0px 3px;
     border-radius: 5px;
     font-size: 20px;
     width: 100px;
@@ -59,7 +59,7 @@ form > input {
     background: #ff9a9a;
     border: 1px solid #acacac;
     display: inline-block;
-    margin: 5px 10px;
+    margin: 0 3px;
     border-radius: 5px;
     font-size: 20px;
     width: 100px;
@@ -70,4 +70,34 @@ form > input {
     background: #7bffb5;
     padding: 10px;
     border: 2px solid #919191;
+    min-height: 50vh;
 }
+
+table{
+    border: 1px solid #94bd88;
+    width: 100%;
+}
+
+td ,th  {
+    border: 1px solid #94bd88;
+    padding: 0px 5px;
+    max-height: 0px;
+    word-break: break-all;
+}
+th {
+    background: #ff42c9;
+    font-size: 22px;
+    padding: 5px;
+}
+
+.th2 {
+    width: 45%;
+}
+
+.tr1 {
+    background: #eaeaff;
+}
+.tr2 {
+    background: #fcf6e2;
+}
+

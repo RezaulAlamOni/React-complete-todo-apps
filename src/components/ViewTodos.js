@@ -1,6 +1,6 @@
 import  style from  '../styles/style.module.css' ;
 
-const ViewTodos = ({todoLists, setTodoList}) => {
+const ViewTodos = ({todoLists, setTodoList,setCompletedTodoLists}) => {
 
     const deleteTodo = (index) => {
         const newTodoList = todoLists.filter((todo, i) => i !== index);
@@ -8,7 +8,7 @@ const ViewTodos = ({todoLists, setTodoList}) => {
     }
     const doneTodo = (index) => {
         const newTodoList = todoLists.filter((todo, i) => i === index);
-        setTodoList(newTodoList);
+        setCompletedTodoLists(newTodoList);
     }
 
     return (
@@ -17,13 +17,15 @@ const ViewTodos = ({todoLists, setTodoList}) => {
             <table>
                 <thead>
                 <tr>
+                    <th>#</th>
                     <th>Todo Name</th>
-                    <th>Action</th>
+                    <th className={style.th2}>Action</th>
                 </tr>
                 </thead>
                 <tbody>
                 {todoLists.map((todo, index) => (
-                    <tr key={index}>
+                    <tr key={index} className={(index%2 == 0) ? style.tr1 : style.tr2}>
+                        <td>{index+1}</td>
                         <td>{todo}</td>
                         <td>
                             <button className={style.delete_button} onClick={ () => deleteTodo(index)}>Delete</button>

@@ -9,6 +9,7 @@ const Home = () => {
 
     const [todo, setTodo] = useState('');
     const [todoLists, setTodoList] = useState([]);
+    const [completedTodoLists, setCompletedTodoLists] = useState([]);
     return (
         <div className={style.home}>
             <Header/>
@@ -17,7 +18,10 @@ const Home = () => {
                   todoLists={todoLists}
                   setTodoList={setTodoList}
             />
-            <ViewTodos todoLists={todoLists} setTodoList={setTodoList}/>
+            <ViewTodos todoLists={todoLists}
+                       setTodoList={setTodoList}
+                       setCompletedTodoLists={setCompletedTodoLists}
+            />
         </div>
     );
 }
