@@ -1,6 +1,6 @@
 import  style from  '../styles/style.module.css' ;
 
-const ViewTodos = ({todoLists, setTodoList,setCompletedTodoLists}) => {
+const ViewTodos = ({todoLists, setTodoList, completedTodoLists ,setCompletedTodoLists}) => {
 
     const deleteTodo = (index) => {
         const newTodoList = todoLists.filter((todo, i) => i !== index);
@@ -8,12 +8,14 @@ const ViewTodos = ({todoLists, setTodoList,setCompletedTodoLists}) => {
     }
     const doneTodo = (index) => {
         const newTodoList = todoLists.filter((todo, i) => i === index);
-        setCompletedTodoLists(newTodoList);
+        const newTodoList1 = todoLists.filter((todo, i) => i !== index);
+        setTodoList(newTodoList1);
+        setCompletedTodoLists([...completedTodoLists,newTodoList]);
     }
 
     return (
         <div className={style.all_todo_list}>
-            <h1>View All Todos</h1>
+            <h1>All Todos</h1>
             <table>
                 <thead>
                 <tr>

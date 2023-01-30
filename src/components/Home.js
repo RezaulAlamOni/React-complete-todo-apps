@@ -4,6 +4,7 @@ import Form from "./Form";
 
 import style from '../styles/style.module.css';
 import ViewTodos from "./ViewTodos";
+import ViewCompletesTodos from "./ViewCompletesTodos";
 
 const Home = () => {
 
@@ -18,10 +19,17 @@ const Home = () => {
                   todoLists={todoLists}
                   setTodoList={setTodoList}
             />
-            <ViewTodos todoLists={todoLists}
-                       setTodoList={setTodoList}
-                       setCompletedTodoLists={setCompletedTodoLists}
-            />
+            <div className={style.view_todos_inline_grid}>
+                <ViewTodos todoLists={todoLists}
+                           setTodoList={setTodoList}
+                           completedTodoLists={completedTodoLists}
+                           setCompletedTodoLists={setCompletedTodoLists}
+                />
+                <ViewCompletesTodos completedTodoLists={completedTodoLists} setCompletedTodoLists={setCompletedTodoLists}/>
+            </div>
+
+
+
         </div>
     );
 }
