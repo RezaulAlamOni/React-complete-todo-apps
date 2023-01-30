@@ -8,7 +8,6 @@ const Home = () => {
 
     const [todo, setTodo] = useState('');
     const [todoLists, setTodoList] = useState([]);
-
     return (
         <div className={style.home}>
             <Header/>
