@@ -36,7 +36,7 @@ form > label {
 }
 
 form > input {
-    padding: 5px;
+    padding: 5px 10px;
     font-size: 20px;
     border: 1px solid #b7b7b7;
     border-radius: 6px;
@@ -51,4 +51,23 @@ form > input {
     margin: 5px 10px;
     border-radius: 5px;
     font-size: 20px;
+    width: 100px;
+}
+
+.delete_button {
+    height: 34px;
+    background: #ff9a9a;
+    border: 1px solid #acacac;
+    display: inline-block;
+    margin: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 100px;
+}
+
+.all_todo_list {
+    width: 50%;
+    background: #7bffb5;
+    padding: 10px;
+    border: 2px solid #919191;
 }

@@ -3,6 +3,7 @@ import {useState} from "react";
 import Form from "./Form";
 
 import style from '../styles/style.module.css';
+import ViewTodos from "./ViewTodos";
 
 const Home = () => {
 
@@ -16,6 +17,7 @@ const Home = () => {
                   todoLists={todoLists}
                   setTodoList={setTodoList}
             />
+            <ViewTodos todoLists={todoLists} setTodoList={setTodoList}/>
         </div>
     );
 }

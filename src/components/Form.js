@@ -16,7 +16,7 @@ const Form = ({todo, setTodo, todoLists, setTodoList}) => {
         <form onSubmit={onSubmitHandle}>
             <label>Todo Name</label>
             <input type="text" onChange={inputHandle} name="todo" value={todo} placeholder="Enter Todo Name"/>
-            <button className={style.submit_button} type="submit">Add Todo</button>
+            <button className={style.submit_button} type="submit">Add</button>
         </form>
     </div>
 }
